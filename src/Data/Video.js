@@ -1,5 +1,13 @@
 import { GoRadioTower } from "react-icons/go"; 
 import { BiCodeAlt } from "react-icons/bi"; 
+import Html from '../Assets/icon/logos_html-5.svg'
+import Css from '../Assets/icon/vscode-icons_file-type-css.svg'
+import Tailwind from '../Assets/icon/skill-icons_tailwindcss-dark.svg'
+import Js from '../Assets/icon/logos_javascript.svg'
+import Reacts from '../Assets/icon/Group 140.svg'
+import Node from '../Assets/icon/Group 139.svg'
+import Express from '../Assets/icon/skill-icons_expressjs-dark.svg'
+import Mongodb from '../Assets/icon/skill-icons_mongodb.svg'
 
 const Videos=[
     {
@@ -25,5 +33,48 @@ const Specializations=[
     },
 ]
 
+const Skill=[
+    {
+        id:1,
+        image:Html,
+        percentage:'90%'
+    },
+    {
+        id:2,
+        image:Css,
+        percentage:'90%'
+    },
+    {
+        id:3,
+        image:Tailwind,
+        percentage:'97%'
+    },
+    {
+        id:4,
+        image:Js,
+        percentage:'80%'
+    },
+    {
+        id:5,
+        image:Reacts,
+        percentage:'90%'
+    },
+    {
+        id:6,
+        image:Node,
+        percentage:'70%'
+    },
+    {
+        id:7,
+        image:Express,
+        percentage:'70%'
+    },
+    {
+        id:8,
+        image:Mongodb,
+        percentage:'90%'
+    },
+]
 
-export  {Videos,Specializations}
+
+export  {Videos,Specializations,Skill}

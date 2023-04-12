@@ -4,6 +4,7 @@ import { FiArrowDown } from "react-icons/fi";
 import About from "./About";
 import Resume from "./Resume";
 import Services from "./Services";
+import Skills from "./Skills";
 
 const Details = () => {
   return (
@@ -61,8 +62,11 @@ const Details = () => {
         <div className="mb-36">
           <Resume />
         </div>
-        <div className="mb-28">
+        <div className="mb-10 lg:mb-28">
           <Services />
+        </div>
+        <div className="mb-10 lg:mb-28">
+          <Skills />
         </div>
       </div>
     </>
