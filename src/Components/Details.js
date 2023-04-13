@@ -5,6 +5,7 @@ import About from "./About";
 import Resume from "./Resume";
 import Services from "./Services";
 import Skills from "./Skills";
+import Projects from "./Projects";
 
 const Details = () => {
   return (
@@ -67,6 +68,9 @@ const Details = () => {
         </div>
         <div className="mb-10 lg:mb-28">
           <Skills />
+        </div>
+        <div className="mb-10 lg:mb-28">
+          <Projects />
         </div>
       </div>
     </>
