@@ -16,7 +16,7 @@ const Skills = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 py-20 ">
           {Skill.map((item) => {
             return (
-              <div className="border-2 flex flex-col justify-center items-center px-7 py-14 rounded-full hover:border-[#28e98c] ">
+              <div className="border-2 flex flex-col justify-center items-center px-7 py-14 rounded-full hover:border-[#28e98c]  hover:-translate-y-4 duration-700">
                 <img src={item.image} alt="" className=""/>
                 <h1 className="text-[#28e98c] text-3xl mt-4 text-center">
                   {item.percentage}
