@@ -77,39 +77,66 @@ const Skill = [
     percentage: "90%",
   },
 ];
- const Color = [
+const Color = [
   {
     id: 1,
-    Green: "#28e98c",
+    color: "#28e98c",
   },
   {
     id: 2,
-    Yellow: "#e4af12",
+    color: "#e4af12",
   },
   {
     id: 3,
-    Orange: "#fe6f1d",
+    color: "#fe6f1d",
   },
   {
     id: 4,
-    lightBlue: "#14c5fd",
+    color: "#14c5fd",
   },
   {
     id: 5,
-    Gray: "#c0c0c0",
+    color: "#c0c0c0",
   },
   {
     id: 6,
-    Bule: "#1338f3",
+    color: "#1338f3",
   },
   {
     id: 6,
-    Red: "#f31313",
+    color: "#f31313",
   },
   {
-    id: 6,
-    Pink: "#ff99cc",
+    id: 7,
+    color: "#ff99cc",
   },
 ];
 
-export { Videos, Specializations, Skill, Color };
+const VideoName = [
+  {
+    id: 1,
+    videoName: "Earth Lines Sphere",
+  },
+  {
+    id: 2,
+    videoName: "3D Abstract Ball",
+  },
+  {
+    id: 3,
+    videoName: "Water Waves",
+  },
+  {
+    id: 4,
+    videoName: "Liquids Wavy",
+  },
+  {
+    id: 5,
+    videoName: "Solid Color",
+  },
+  {
+    id: 6,
+    videoName: "Simple Strings",
+  },
+];
+
+export { Videos, Specializations, Skill, Color, VideoName };

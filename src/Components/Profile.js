@@ -6,25 +6,35 @@ import { HiMail } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import ProfilePic from "../Assets/Profile.png";
 import Modal from "react-modal";
-import {Color} from '../Data/Video'
+import { Color, VideoName } from "../Data/Video";
 
 const Profile = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [colorName, setColorName] = useState('#28e98c');
+
+  const handleClick = (id) => {
+    console.log(id);
+    const NewData = Color.filter((item) => item.id === id);
+    const NewDataColor = NewData.map((item) => item.color);
+    console.log(NewDataColor);
+    setColorName(NewDataColor);
+    setIsOpen(false)
+  };
 
   return (
     <>
-      <div className="flex flex-col font-mono">
+      <div className="flex flex-col font-mono ">
         <div
-          className="bg-[#1f1f1f] w-14 h-8 flex justify-center items-center  rounded-r-lg fixed"
+          className="bg-[#1f1f1f] w-14 h-8 flex justify-center items-center  rounded-r-lg fixed cursor-pointer "
           onClick={() => setIsOpen(true)}
         >
-          <FiSettings className="text-gray-500 animates group " size={20} />
+          <FiSettings className="text-gray-500 animate-spin group " size={20} />
         </div>
         <div>
           <Modal
             isOpen={modalIsOpen}
             onRequestClose={() => setIsOpen(false)}
-            className="w-[340px] lg:w-[900px] h-full bg-black/90 absolute right-0"
+            className="w-[340px] lg:w-[900px] h-full bg-black/90 absolute right-0 overflow-y-scroll outline-none"
             overlayClassName="Overlay"
           >
             <div className="flex justify-end">
@@ -34,41 +44,52 @@ const Profile = () => {
               >
                 <AiOutlineClose size={40} />
               </button>
-
             </div>
-              <div className="p-20">
-                <h1 className="text-white tracking-wide text-3xl">Configuration</h1>
-                <h1 className="text-white tracking-wide text-sm mt-20">COLORS</h1>
-                <div className="">
-                  {
-                    Color.map((item)=>{
-                      return(
+            <div className="lg:p-20 p-10">
+              <h1 className="text-white tracking-wide text-3xl">
+                Configuration
+              </h1>
+              <h1 className="text-white tracking-wide text-sm mt-20">COLORS</h1>
+              <div className="grid grid-cols-3 gap-10 lg:grid-cols-8 py-10">
+                {Color.map((item) => {
+                  return (
+                    <>
+                      <div className="flex ">
+                        <div
+                          onClick={() => handleClick(item.id)}
+                          className="w-8 h-8 rounded-full bg-[#28e98c] hover:outline-none duration-300 outline outline-2 outline-offset-4 outline-white cursor-pointer"
+                          style={{ backgroundColor: item.color }}
+                        ></div>
+                      </div>
+                    </>
+                  );
+                })}
+              </div>
+              <div className="mt-5">
+                <h1 className="text-white tracking-wider py-10">
+                  THREE DIMENSIONAL SHAPES
+                </h1>
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
+                  {VideoName.map((item) => {
+                    return (
                       <>
-                    <div  className="flex" >
-                    <div className="w-10 h-10 rounded-full" style={{backgroundColor:item.Green}}></div>
-                    <div className="w-10 h-10 rounded-full" style={{backgroundColor:item.Bule}}></div>
-                    <div style={{backgroundColor:item.Gray,width:30,height:30,borderRadius:15}}></div>
-                    <div style={{backgroundColor:item.Orange,width:30,height:30,borderRadius:15}}></div>
-                    <div style={{backgroundColor:item.Pink,width:30,height:30,borderRadius:15}}></div>
-                    <div style={{backgroundColor:item.Red,width:30,height:30,borderRadius:15}}></div>
-                    <div style={{backgroundColor:item.Yellow,width:30,height:30,borderRadius:15}}></div>
-                    <div style={{backgroundColor:item.lightBlue,width:30,height:30,borderRadius:15}}></div>
-                    </div>
+                        <div className="text-white cursor-pointer">
+                          {" "}
+                          {item.videoName}
+                        </div>
                       </>
-                        )
-                    }
-                    
-                    )
-                  }
+                    );
+                  })}
                 </div>
               </div>
+            </div>
           </Modal>
         </div>
         <div className="mt-10 md:px-10 flex md:flex-none justify-center px-5 lg:hover:translate-x-4 duration-500 lg:fixed">
           <div className="w-[750px] lg:w-[400px] px-5 py-7 border border-gray-500 rounded-3xl ">
             <div className="group">
               <div className="flex justify-between items-center">
-                <h1 className="text-white text-3xl font-extrabold ">
+                <h1 className=" text-3xl font-extrabold ml-5" style={{color:colorName}}>
                   Mushthak
                 </h1>
                 <h1 className="text-white  text-sm w-28">

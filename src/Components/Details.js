@@ -23,7 +23,8 @@ const Details = () => {
             Mushthak
           </span>{" "}
           <span className="lg:whitespace-nowrap">
-            a skilled <br /> MERN Stack Developer
+            a skilled <br />{" "}
+            <span className="text-2xl lg:text-3xl ">MERN Stack Developer</span>
           </span>
         </div>
         <div className="text-gray-400  mt-10 max-w-[700px]">

@@ -4,10 +4,10 @@ import { Details, Profile, SideTab } from "../Components";
 
 const Home = () => {
   return (
-    <div >
+    <div>
       {Videos.map((item, index) => {
         return (
-          <div >
+          <div>
             <video
               muted
               autoPlay
@@ -19,11 +19,11 @@ const Home = () => {
           </div>
         );
       })}
-      <div className="absolute  lg:flex justify-between h-full w-full py-4 lg:py-16  ">
+      <div className="absolute  lg:flex justify-between h-full w-full py-4 lg:py-8  ">
         <section className="">
           <Profile />
         </section>
-        <section >
+        <section>
           <Details />
         </section>
         <section className=" ">

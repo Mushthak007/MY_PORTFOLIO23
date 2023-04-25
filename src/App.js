@@ -2,10 +2,13 @@ import React from "react";
 import Routers from "./Router";
 import CustomCursor from "custom-cursor-react";
 import "custom-cursor-react/dist/index.css";
+import { Provider } from 'react-redux';
+import Store from "./Redux/Store";
 
 const App = () => {
   return (
     <div >
+        <Provider store={Store}>
       <CustomCursor
         targets={[".link", ".your-css-selector"]}
         customClass="custom-cursor"
@@ -19,6 +22,7 @@ const App = () => {
         targetOpacity={0.5}
       ></CustomCursor>
       <Routers />
+        </Provider>
     </div>
   );
 };
