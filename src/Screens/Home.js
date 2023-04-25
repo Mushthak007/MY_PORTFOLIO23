@@ -19,7 +19,7 @@ const Home = () => {
           </div>
         );
       })}
-      <div className="absolute  lg:flex justify-between h-full w-full py-4 lg:py-8  ">
+      <div className="absolute  lg:flex justify-between h-full w-full py-4 lg:py-5  ">
         <section className="">
           <Profile />
         </section>

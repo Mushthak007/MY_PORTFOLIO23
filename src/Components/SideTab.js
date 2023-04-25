@@ -9,7 +9,7 @@ import { GiNotebook } from "react-icons/gi";
 const SideTab = () => {
   return (
 <div className="">
-<div className="border px-4  py-8 hidden xl:fixed right-10 top-[300px] border-gray-500 rounded-full xl:flex flex-col gap-y-8">
+<div className="border px-4  py-8 hidden xl:fixed right-10 top-[150px] border-gray-500 rounded-full xl:flex flex-col gap-y-8">
       <div>
         <FaHome className="text-slate-200 hover:text-[#28e98c]  cursor-pointer" size={23}/>
       </div>
