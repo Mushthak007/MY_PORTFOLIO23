@@ -35,7 +35,7 @@ const Profile = () => {
   return (
     <>
       <div
-        className="bg-[#1f1f1f] w-14 h-8 flex justify-center items-center  rounded-r-lg fixed cursor-pointer lg:mt-16 "
+        className="bg-[#1f1f1f] w-10 h-8 flex justify-center items-center  rounded-r-lg fixed cursor-pointer lg:mt-16"
         onClick={() => setIsOpen(true)}
       >
         <FiSettings className="text-gray-500 animate-spin group " size={20} />
@@ -96,8 +96,8 @@ const Profile = () => {
             </div>
           </Modal>
         </div>
-        <div className="mt-10 lg:mt-0 md:px-10 flex  justify-center px-5 lg:hover:translate-x-4 duration-500 lg:fixed">
-          <div className="w-[750px] lg:w-[350px] px-5 py-8 border border-gray-500 rounded-3xl ">
+        <div className="mt-10 lg:mt-0 md:px-10 flex  justify-center px-5 lg:hover:translate-x-4 duration-500 lg:fixed lg:ml-7">
+          <div className="w-[750px] lg:w-[350px] px-5 py-5 border border-gray-500 rounded-3xl ">
             <div className="group">
               <div className="flex justify-between items-center">
                 <h1
@@ -110,10 +110,10 @@ const Profile = () => {
                   MERN Stack Developer
                 </h1>
               </div>
-              <div className="flex justify-center items-center py-7">
+              <div className="flex justify-center items-center py-5">
                 <img
                   src={ProfilePic}
-                  className="w-[280px] h-[280px] object-cover rounded-3xl group-hover:rotate-3 duration-500 cursor-pointer "
+                  className="w-[260px] h-[260px] object-cover rounded-3xl group-hover:rotate-3 duration-500 cursor-pointer "
                   alt=""
                 />
               </div>
