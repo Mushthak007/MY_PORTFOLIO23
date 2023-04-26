@@ -86,7 +86,7 @@ const Profile = () => {
           </Modal>
         </div>
         <div className="mt-10 md:px-10 flex md:flex-none justify-center px-5 lg:hover:translate-x-4 duration-500 lg:fixed">
-          <div className="w-[750px] lg:w-[400px] px-5 py-5 border border-gray-500 rounded-3xl ">
+          <div className="w-[750px] lg:w-[350px] px-5 py-5 border border-gray-500 rounded-3xl ">
             <div className="group">
               <div className="flex justify-between items-center">
                 <h1 className=" text-3xl font-extrabold ml-5" style={{color:colorName}}>
