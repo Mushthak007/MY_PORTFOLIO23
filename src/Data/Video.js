@@ -14,6 +14,37 @@ const Videos = [
     id: 1,
     video:
       "https://wpriverthemes.com/drake/wp-content/themes/drake/assets/images/video1.mp4",
+    videoName: "Earth Lines Sphere",
+  },
+  {
+    id: 2,
+    video:
+      "https://wpriverthemes.com/drake/wp-content/themes/drake/assets/images/video2.mp4",
+    videoName: "3D Abstract Ball",
+  },
+  {
+    id: 3,
+    video:
+      "https://wpriverthemes.com/drake/wp-content/themes/drake/assets/images/video1.mp4",
+    videoName: "Water Waves",
+  },
+  {
+    id: 4,
+    video:
+      "https://wpriverthemes.com/drake/wp-content/themes/drake/assets/images/video1.mp4",
+    videoName: "Liquids Wavy",
+  },
+  {
+    id: 5,
+    video:
+      "https://wpriverthemes.com/drake/wp-content/themes/drake/assets/images/video1.mp4",
+    videoName: "Solid Color",
+  },
+  {
+    id: 6,
+    video:
+      "https://wpriverthemes.com/drake/wp-content/themes/drake/assets/images/video1.mp4",
+    videoName: "Simple Strings",
   },
 ];
 
@@ -103,11 +134,11 @@ const Color = [
     color: "#1338f3",
   },
   {
-    id: 6,
+    id: 7,
     color: "#f31313",
   },
   {
-    id: 7,
+    id: 8,
     color: "#ff99cc",
   },
 ];

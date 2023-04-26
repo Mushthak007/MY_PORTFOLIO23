@@ -6,11 +6,13 @@ import Resume from "./Resume";
 import Services from "./Services";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import { useSelector } from "react-redux";
 
 const Details = () => {
+  const {ColorNameFirst} = useSelector(state => state.Color);
   return (
     <>
-      <div className=" lg:mt-16 mt-5  xl:mr-60 p-5  max-w-[950px] lg:ml-[500px] font-mono ">
+      <div className=" lg:mt-28 mt-5  xl:mr-60 p-5  max-w-[950px] lg:ml-[500px] font-mono ">
         <div className="flex gap-2 items-center border border-gray-500 w-36 justify-center  py-1 rounded-2xl">
           <FaHome className="text-slate-200" />
           <h1 className="text-slate-200">INTRODUCE</h1>
@@ -19,7 +21,7 @@ const Details = () => {
         <div className="text-white font-thin tracking-widest leading-normal text-4xl xl:text-6xl lg:tracking-widest lg:leading-snug mt-8">
           <span className="text-slate-400"> Say Hi from,</span>
           <br />{" "}
-          <span className="text-[#28e98c] font-bold text-5xl  lg:text-[50px] xl:text-[100px] whitespace-nowrap">
+          <span className="font-bold text-5xl  lg:text-[50px] xl:text-[100px] whitespace-nowrap" style={{color:ColorNameFirst}}>
             Mushthak
           </span>{" "}
           <span className="lg:whitespace-nowrap">
@@ -48,11 +50,11 @@ const Details = () => {
         </div>
         <div className="flex gap-x-10">
           <div className="w-[150px]">
-            <h1 className=" text-[#28e98c] text-7xl">1+</h1>
+            <h1 className="  text-7xl" style={{color:ColorNameFirst}}>1+</h1>
             <div className="text-gray-500 mt-3">YEARS OF EXPERIENCE</div>
           </div>
           <div className="w-[200px] ">
-            <h1 className=" text-[#28e98c] text-7xl">10+</h1>
+            <h1 className=" text-7xl" style={{color:ColorNameFirst}}>10+</h1>
             <div className="text-gray-500 mt-3">
               PROJECTS COMPLETED ON 3 COUNTRIES
             </div>
