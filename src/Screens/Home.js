@@ -1,11 +1,14 @@
 import React from "react";
 import { Videos } from "../Data/Video";
 import { Details, Profile, SideTab } from "../Components";
+import { useSelector } from "react-redux";
 
 const Home = () => {
+  const {Video} = useSelector(state => state.Color);
+  console.log("vide0",Video)
   return (
     <div>
-      {Videos.map((item, index) => {
+      {Video.map((item, index) => {
         return (
           <div>
             <video
@@ -19,7 +22,7 @@ const Home = () => {
           </div>
         );
       })}
-      <div className="absolute  lg:flex justify-between h-full w-full py-4 lg:py-5  ">
+      <div className="absolute bg-black/60  lg:flex justify-between py-4 lg:py-0 ">
         <section className="">
           <Profile />
         </section>

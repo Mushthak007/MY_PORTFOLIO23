@@ -6,11 +6,15 @@ import { HiMail } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import ProfilePic from "../Assets/Profile.png";
 import Modal from "react-modal";
-import { Color, VideoName } from "../Data/Video";
+import { Color, VideoName,Videos } from "../Data/Video";
+import { useDispatch, useSelector } from "react-redux";
+import { ColorNames, VideoLink } from "../Redux/Reducer";
 
 const Profile = () => {
+  const dispatch = useDispatch();
+  const {ColorNameFirst} = useSelector(state => state.Color);
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [colorName, setColorName] = useState('#28e98c');
+  const [colorName, setColorName] = useState("#28e98c");
 
   const handleClick = (id) => {
     console.log(id);
@@ -18,18 +22,25 @@ const Profile = () => {
     const NewDataColor = NewData.map((item) => item.color);
     console.log(NewDataColor);
     setColorName(NewDataColor);
-    setIsOpen(false)
+    dispatch(ColorNames(NewDataColor));
+    setIsOpen(false);
+  };
+  const handleClickVideo = (id) => {
+    console.log(id);
+    const NewData = Videos.filter((item) => item.id === id);
+     dispatch(VideoLink(NewData));
+      setIsOpen(false);
   };
 
   return (
     <>
-      <div className="flex flex-col font-mono ">
-        <div
-          className="bg-[#1f1f1f] w-14 h-8 flex justify-center items-center  rounded-r-lg fixed cursor-pointer "
-          onClick={() => setIsOpen(true)}
-        >
-          <FiSettings className="text-gray-500 animate-spin group " size={20} />
-        </div>
+      <div
+        className="bg-[#1f1f1f] w-14 h-8 flex justify-center items-center  rounded-r-lg fixed cursor-pointer lg:mt-16 "
+        onClick={() => setIsOpen(true)}
+      >
+        <FiSettings className="text-gray-500 animate-spin group " size={20} />
+      </div>
+      <div className="flex flex-col lg:justify-center lg:h-screen font-mono ">
         <div>
           <Modal
             isOpen={modalIsOpen}
@@ -51,10 +62,10 @@ const Profile = () => {
               </h1>
               <h1 className="text-white tracking-wide text-sm mt-20">COLORS</h1>
               <div className="grid grid-cols-3 gap-10 lg:grid-cols-8 py-10">
-                {Color.map((item) => {
+                {Color.map((item, index) => {
                   return (
                     <>
-                      <div className="flex ">
+                      <div className="flex " key={index}>
                         <div
                           onClick={() => handleClick(item.id)}
                           className="w-8 h-8 rounded-full bg-[#28e98c] hover:outline-none duration-300 outline outline-2 outline-offset-4 outline-white cursor-pointer"
@@ -70,10 +81,10 @@ const Profile = () => {
                   THREE DIMENSIONAL SHAPES
                 </h1>
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
-                  {VideoName.map((item) => {
+                  {Videos.map((item, index) => {
                     return (
                       <>
-                        <div className="text-white cursor-pointer">
+                        <div className="text-white cursor-pointer" key={index} onClick={()=>handleClickVideo(item.id)}>
                           {" "}
                           {item.videoName}
                         </div>
@@ -85,25 +96,28 @@ const Profile = () => {
             </div>
           </Modal>
         </div>
-        <div className="mt-10 md:px-10 flex md:flex-none justify-center px-5 lg:hover:translate-x-4 duration-500 lg:fixed">
-          <div className="w-[750px] lg:w-[400px] px-5 py-5 border border-gray-500 rounded-3xl ">
+        <div className="mt-10 lg:mt-0 md:px-10 flex  justify-center px-5 lg:hover:translate-x-4 duration-500 lg:fixed">
+          <div className="w-[750px] lg:w-[400px] px-5 py-8 border border-gray-500 rounded-3xl ">
             <div className="group">
               <div className="flex justify-between items-center">
-                <h1 className=" text-3xl font-extrabold ml-5" style={{color:colorName}}>
+                <h1
+                  className="text-[#28e98c] text-3xl font-extrabold ml-5"
+                  
+                >
                   Mushthak
                 </h1>
                 <h1 className="text-white  text-sm w-28">
                   MERN Stack Developer
                 </h1>
               </div>
-              <div className="flex justify-center items-center py-5">
+              <div className="flex justify-center items-center py-7">
                 <img
                   src={ProfilePic}
-                  className="w-[250px] h-[250px] object-cover rounded-3xl group-hover:rotate-3 duration-500 cursor-pointer "
+                  className="w-[280px] h-[280px] object-cover rounded-3xl group-hover:rotate-3 duration-500 cursor-pointer "
                   alt=""
                 />
               </div>
-              <div className="flex flex-col justify-center items-center py-3">
+              <div className="flex flex-col justify-center items-center py-5">
                 <h1 className="text-white text-xl font-semibold tracking-wide">
                   mushtak2899@gmail.com
                 </h1>
@@ -141,7 +155,7 @@ const Profile = () => {
                 </div>
               </div>
               <div className="group">
-                <div className="border duration-500  border-gray-500 w-10 h-10 flex justify-center items-center rounded-full group-hover:border-[#28e98c] cursor-pointer ">
+                <div className="border duration-500   border-gray-500 w-10 h-10 flex justify-center items-center rounded-full group-hover:border-[#28e98c] cursor-pointer ">
                   <BsTwitter
                     className="text-gray-500  group-hover:text-[#28e98c]"
                     size={15}
@@ -149,8 +163,8 @@ const Profile = () => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center  mt-5 group">
-              <button className="flex justify-center gap-2 bg-[#28e98c] w-[250px] duration-500 items-center rounded-full py-3 hover:bg-transparent border border-[#28e98c] group-hover:border-[#28e98c]">
+            <div className="flex justify-center  mt-7 group">
+              <button  className='flex justify-center gap-2  w-[250px] bg-[#28e98c] duration-500 items-center rounded-full py-3 hover:bg-transparent border border-[#28e98c] group-hover:border-[#28e98c]'>
                 <HiMail
                   className="text-black  group-hover:text-[#28e98c] "
                   size={20}

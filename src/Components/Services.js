@@ -1,8 +1,10 @@
 import React from "react";
 import { AiOutlineCode } from "react-icons/ai";
 import { Specializations } from "../Data/Video";
+import { useSelector } from "react-redux";
 
 const Services = () => {
+  const {ColorNameFirst} = useSelector(state => state.Color);
   return (
     <div>
       <div className="flex gap-2 items-center border border-gray-500 w-36 justify-center  py-1 rounded-2xl">
@@ -12,7 +14,7 @@ const Services = () => {
 
       <div className="py-8">
         <h1 className="text-white text-3xl lg:text-5xl">
-          My <span className="text-[#28e98c]">Specializations</span>
+          My <span style={{color:ColorNameFirst}} >Specializations</span>
         </h1>
         <div className="mt-10">
           <div className="flex flex-col gap-10 ">
@@ -23,7 +25,7 @@ const Services = () => {
                     <h1 className="text-white text-2xl tracking-wider">
                       {item.title}
                     </h1>
-                    <span className="text-[#28e98c]">{item.icon}</span>
+                    <span style={{color:ColorNameFirst}} >{item.icon}</span>
                   </div>
                   <div>
                     <h1 className="text-gray-500 py-2">{item.subtitle}</h1>

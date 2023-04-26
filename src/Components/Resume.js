@@ -1,7 +1,9 @@
 import React from "react";
 import { BsCalendar3 } from "react-icons/bs";
+import { useSelector } from "react-redux";
 
 const Resume = () => {
+  const {ColorNameFirst} = useSelector(state => state.Color);
   return (
     <div>
       <div className="flex gap-2 items-center border border-gray-500 w-32 justify-center  py-1 rounded-2xl">
@@ -10,7 +12,7 @@ const Resume = () => {
       </div>
       <div className="py-5 mt-4 tracking-wide">
         <h1 className="text-5xl text-white">
-          Education & <span className="text-[#28e98c] ">Experience</span>
+          Education & <span  style={{color:ColorNameFirst}} >Experience</span>
         </h1>
       </div>
       <div className="flex flex-col justify-center group">

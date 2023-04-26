@@ -1,7 +1,9 @@
 import React from "react";
 import { FiUser } from "react-icons/fi";
+import { useSelector } from "react-redux";
 
 const About = () => {
+  const {ColorNameFirst} = useSelector(state => state.Color);
   return (
     <div>
       <div className="flex gap-2 items-center border border-gray-500 w-32 justify-center  py-1 rounded-2xl">
@@ -11,7 +13,7 @@ const About = () => {
       <div>
         <h1 className="text-white text-2xl lg:text-5xl leading-snug py-5 lg:py-12 mt-4 font-light">
           Development is similar to putting together a puzzle,{" "}
-          <span className="text-[#28e98c] ">
+          <span style={{color:ColorNameFirst}}>
             But you get to design the parts yourself.
           </span>
         </h1>
