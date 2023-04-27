@@ -7,6 +7,7 @@ import Services from "./Services";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import { useSelector } from "react-redux";
+import Contact from "./Contact";
 
 const Details = () => {
   const {ColorNameFirst} = useSelector(state => state.Color);
@@ -21,7 +22,7 @@ const Details = () => {
         <div className="text-white font-thin tracking-widest leading-normal text-4xl xl:text-6xl lg:tracking-widest lg:leading-snug mt-8">
           <span className="text-slate-400"> Say Hi from,</span>
           <br />{" "}
-          <span className="font-bold text-5xl  lg:text-[50px] xl:text-[100px] whitespace-nowrap" style={{color:ColorNameFirst}}>
+          <span className="font-bold text-5xl  lg:text-[50px] xl:text-[100px] whitespace-nowrap " style={{color:ColorNameFirst}}>
             Mushthak
           </span>{" "}
           <span className="lg:whitespace-nowrap">
@@ -74,6 +75,9 @@ const Details = () => {
         </div>
         <div className="mb-10 lg:mb-28">
           <Projects />
+        </div>
+        <div className="mb-10 lg:mb-28">
+          <Contact />
         </div>
       </div>
     </>

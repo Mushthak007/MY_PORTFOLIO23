@@ -3,21 +3,29 @@
 @tailwind utilities;
 
 * {
-    box-sizing: border-box;
-  }
-  .animates {
-    animation: spin 7s linear infinite;
-  
-    @keyframes spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
+  box-sizing: border-box;
+}
+.animates {
+  animation: spin 7s linear infinite;
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
     }
   }
-  
-  .Overlay{
-    @apply bg-black/40 fixed bottom-0 top-0 left-0 right-0
-  }
+}
+
+.Overlay {
+  @apply bg-black/40 fixed bottom-0 top-0 left-0 right-0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}

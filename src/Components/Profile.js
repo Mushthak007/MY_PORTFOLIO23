@@ -4,15 +4,16 @@ import { BsInstagram, BsTwitter, BsGithub } from "react-icons/bs";
 import { BiWorld } from "react-icons/bi";
 import { HiMail } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
+import { BsFillCloudDownloadFill } from "react-icons/bs";
 import ProfilePic from "../Assets/Profile.png";
 import Modal from "react-modal";
-import { Color, VideoName,Videos } from "../Data/Video";
+import { Color, VideoName, Videos } from "../Data/Video";
 import { useDispatch, useSelector } from "react-redux";
 import { ColorNames, VideoLink } from "../Redux/Reducer";
 
 const Profile = () => {
   const dispatch = useDispatch();
-  const {ColorNameFirst} = useSelector(state => state.Color);
+  const { ColorNameFirst } = useSelector((state) => state.Color);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [colorName, setColorName] = useState("#28e98c");
 
@@ -26,10 +27,13 @@ const Profile = () => {
     setIsOpen(false);
   };
   const handleClickVideo = (id) => {
+    // window.location.reload()
     console.log(id);
     const NewData = Videos.filter((item) => item.id === id);
-     dispatch(VideoLink(NewData));
-      setIsOpen(false);
+    const NewDataColor = NewData.map((item) => item.video);
+    dispatch(VideoLink(NewData));
+    console.log("mapVideo-->", NewData);
+    setIsOpen(false);
   };
 
   return (
@@ -84,7 +88,11 @@ const Profile = () => {
                   {Videos.map((item, index) => {
                     return (
                       <>
-                        <div className="text-white cursor-pointer" key={index} onClick={()=>handleClickVideo(item.id)}>
+                        <div
+                          className="text-white cursor-pointer"
+                          key={index}
+                          onClick={() => handleClickVideo(item.id)}
+                        >
                           {" "}
                           {item.videoName}
                         </div>
@@ -100,10 +108,7 @@ const Profile = () => {
           <div className="w-[750px] lg:w-[350px] px-5 py-5 border border-gray-500 rounded-3xl ">
             <div className="group">
               <div className="flex justify-between items-center">
-                <h1
-                  className="text-[#28e98c] text-3xl font-extrabold ml-5"
-                  
-                >
+                <h1 className="text-[#28e98c] text-3xl font-extrabold ml-5">
                   Mushthak
                 </h1>
                 <h1 className="text-white  text-sm w-28">
@@ -164,13 +169,13 @@ const Profile = () => {
               </div>
             </div>
             <div className="flex justify-center  mt-7 group">
-              <button  className='flex justify-center gap-2  w-[250px] bg-[#28e98c] duration-500 items-center rounded-full py-3 hover:bg-transparent border border-[#28e98c] group-hover:border-[#28e98c]'>
-                <HiMail
+              <button className="flex justify-center gap-2  w-[250px] bg-[#28e98c] duration-500 items-center rounded-full py-3 hover:bg-transparent border border-[#28e98c] group-hover:border-[#28e98c]">
+                <BsFillCloudDownloadFill
                   className="text-black  group-hover:text-[#28e98c] "
                   size={20}
                 />
                 <h1 className="text-black group-hover:text-[#28e98c]">
-                  HIRE ME!
+                  Download Cv
                 </h1>
               </button>
             </div>

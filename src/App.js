@@ -2,18 +2,17 @@ import React from "react";
 import Routers from "./Router";
 import CustomCursor from "custom-cursor-react";
 import "custom-cursor-react/dist/index.css";
-import { Provider } from 'react-redux';
-import Store from "./Redux/Store";
+import { useSelector } from "react-redux";
 
 const App = () => {
+  const { ColorNameFirst } = useSelector((state) => state.Color);
   return (
-    <div >
-        <Provider store={Store}>
+    <div>
       <CustomCursor
         targets={[".link", ".your-css-selector"]}
         customClass="custom-cursor"
         dimensions={50}
-        fill="#28e98c"
+        fill={ColorNameFirst}
         smoothness={{
           movement: 0.2,
           scale: 0.1,
@@ -22,7 +21,6 @@ const App = () => {
         targetOpacity={0.5}
       ></CustomCursor>
       <Routers />
-        </Provider>
     </div>
   );
 };

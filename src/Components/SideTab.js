@@ -5,6 +5,7 @@ import { BsCalendar3 } from "react-icons/bs";
 import { AiOutlineCode } from "react-icons/ai";
 import { GiSkills } from "react-icons/gi";
 import { GiNotebook } from "react-icons/gi";
+import { AiFillMail } from "react-icons/ai"
 
 const SideTab = () => {
   return (
@@ -27,6 +28,9 @@ const SideTab = () => {
       </div>
       <div>
         <GiNotebook className="text-slate-200 hover:text-[#28e98c]  cursor-pointer" size={23} />
+      </div>
+      <div>
+        <AiFillMail className="text-slate-200 hover:text-[#28e98c]  cursor-pointer" size={23} />
       </div>
     </div>
 </div>
