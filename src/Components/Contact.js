@@ -33,7 +33,7 @@ const Contact = () => {
         <div className="py-7">
           <h1 className="text-white capitalize">
           company name <span className="text-red-500">*</span>
-          </h1>
+          </h1> 
           <input
             type="text"
             placeholder="Your Company Name"
@@ -67,12 +67,12 @@ const Contact = () => {
           />
         </div>
         <div className=" group">
-          <button className="flex justify-center gap-2  w-[250px] bg-[#28e98c] duration-500 items-center rounded-full py-3 hover:bg-transparent border border-[#28e98c] group-hover:border-[#28e98c]">
+          <button style={{backgroundColor:ColorNameFirst}} className="flex justify-center gap-2  w-[250px]  duration-500 items-center rounded-full py-3 ">
             <AiOutlineMessage
-              className="text-black  group-hover:text-[#28e98c] "
+              className="text-black   "
               size={20}
             />
-            <h1 className="text-black group-hover:text-[#28e98c]">
+            <h1 className="text-black ">
               SEND MESSAGE
             </h1>
           </button>

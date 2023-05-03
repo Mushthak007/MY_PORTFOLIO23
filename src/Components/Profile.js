@@ -10,6 +10,7 @@ import Modal from "react-modal";
 import { Color, VideoName, Videos } from "../Data/Video";
 import { useDispatch, useSelector } from "react-redux";
 import { ColorNames, VideoLink } from "../Redux/Reducer";
+import { motion } from "framer-motion";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -104,83 +105,84 @@ const Profile = () => {
             </div>
           </Modal>
         </div>
-        <div className="mt-10 lg:mt-0 md:px-10 flex  justify-center px-5 lg:hover:translate-x-4 duration-500 lg:fixed lg:ml-7">
-          <div className="w-[750px] lg:w-[350px] px-5 py-5 border border-gray-500 rounded-3xl ">
-            <div className="group">
-              <div className="flex justify-between items-center">
-                <h1 className="text-[#28e98c] text-3xl font-extrabold ml-5">
-                  Mushthak
-                </h1>
-                <h1 className="text-white  text-sm w-28">
-                  MERN Stack Developer
-                </h1>
-              </div>
-              <div className="flex justify-center items-center py-5">
-                <img
-                  src={ProfilePic}
-                  className="w-[260px] h-[260px] object-cover rounded-3xl group-hover:rotate-3 duration-500 cursor-pointer "
-                  alt=""
-                />
-              </div>
-              <div className="flex flex-col justify-center items-center py-5">
-                <h1 className="text-white text-xl font-semibold tracking-wide">
-                  mushtak2899@gmail.com
-                </h1>
-                <h1 className="text-white text-xl font-semibold tracking-wide">
-                  Based in Kochi
-                </h1>
-                <h1 className="text-slate-500 mt-5 text-sm">
-                  © 2023 Mushthak. All Rights Reserved
-                </h1>
-              </div>
-            </div>
-            <div className="flex justify-center items-center gap-4  ">
+          <div className="mt-10 lg:mt-0 md:px-10 flex  justify-center px-5 lg:hover:translate-x-4 duration-500 lg:fixed lg:ml-7">
+            <div className="w-[750px] lg:w-[350px] px-5 py-5 border border-gray-500 rounded-3xl ">
               <div className="group">
-                <div className="border duration-500  border-gray-500 w-10 h-10 flex justify-center items-center rounded-full  group-hover:border-[#28e98c] cursor-pointer">
-                  <BsGithub
-                    className="text-gray-500  group-hover:text-[#28e98c]"
-                    size={15}
+                <div className="flex justify-between items-center">
+                  <h1
+                    className="text-3xl font-extrabold ml-5"
+                    style={{ color: ColorNameFirst }}
+                  >
+                    Mushthak
+                  </h1>
+                  <h1 className="text-white  text-sm w-28">
+                    MERN Stack Developer
+                  </h1>
+                </div>
+                <div className="flex justify-center items-center py-5">
+                  <img
+                    src={ProfilePic}
+                    className="w-[260px] h-[260px] object-cover rounded-3xl group-hover:rotate-3 duration-500 cursor-pointer "
+                    alt=""
                   />
                 </div>
-              </div>
-              <div className="group">
-                <div className="border duration-500  border-gray-500 w-10 h-10 flex justify-center items-center rounded-full  group-hover:border-[#28e98c] cursor-pointer">
-                  <BiWorld
-                    className="text-gray-500  group-hover:text-[#28e98c]"
-                    size={15}
-                  />
+                <div className="flex flex-col justify-center items-center py-5">
+                  <h1 className="text-white text-xl font-semibold tracking-wide">
+                    mushtak2899@gmail.com
+                  </h1>
+                  <h1 className="text-white text-xl font-semibold tracking-wide">
+                    Based in Kochi
+                  </h1>
+                  <h1 className="text-slate-500 mt-5 text-sm">
+                    © 2023 Mushthak. All Rights Reserved
+                  </h1>
                 </div>
               </div>
-              <div className="group">
-                <div className="border duration-500  border-gray-500 w-10 h-10 flex justify-center items-center rounded-full group   group-hover:border-[#28e98c] cursor-pointer">
-                  <BsInstagram
-                    className="text-gray-500  group-hover:text-[#28e98c] "
-                    size={15}
-                  />
+              <div className="flex justify-center items-center gap-4  ">
+                <div className="group">
+                  <div className="border duration-500  border-gray-500 w-10 h-10 flex justify-center items-center rounded-full  group-hover:border-[#28e98c] cursor-pointer">
+                    <BsGithub
+                      className="text-gray-500  group-hover:text-[#28e98c]"
+                      size={15}
+                    />
+                  </div>
+                </div>
+                <div className="group">
+                  <div className="border duration-500  border-gray-500 w-10 h-10 flex justify-center items-center rounded-full  group-hover:border-[#28e98c] cursor-pointer">
+                    <BiWorld
+                      className="text-gray-500  group-hover:text-[#28e98c]"
+                      size={15}
+                    />
+                  </div>
+                </div>
+                <div className="group">
+                  <div className="border duration-500  border-gray-500 w-10 h-10 flex justify-center items-center rounded-full group   group-hover:border-[#28e98c] cursor-pointer">
+                    <BsInstagram
+                      className="text-gray-500  group-hover:text-[#28e98c] "
+                      size={15}
+                    />
+                  </div>
+                </div>
+                <div className="group">
+                  <div className="border duration-500   border-gray-500 w-10 h-10 flex justify-center items-center rounded-full group-hover:border-[#28e98c] cursor-pointer ">
+                    <BsTwitter
+                      className="text-gray-500  group-hover:text-[#28e98c]"
+                      size={15}
+                    />
+                  </div>
                 </div>
               </div>
-              <div className="group">
-                <div className="border duration-500   border-gray-500 w-10 h-10 flex justify-center items-center rounded-full group-hover:border-[#28e98c] cursor-pointer ">
-                  <BsTwitter
-                    className="text-gray-500  group-hover:text-[#28e98c]"
-                    size={15}
-                  />
-                </div>
+              <div className="flex justify-center  mt-7 group">
+                <button
+                  style={{ backgroundColor: ColorNameFirst }}
+                  className="flex justify-center gap-2 w-[250px]  duration-500 items-center rounded-full py-3 hover:bg-transparent"
+                >
+                  <BsFillCloudDownloadFill className="text-black " size={20} />
+                  <h1 className="text-black">Download Cv</h1>
+                </button>
               </div>
-            </div>
-            <div className="flex justify-center  mt-7 group">
-              <button className="flex justify-center gap-2  w-[250px] bg-[#28e98c] duration-500 items-center rounded-full py-3 hover:bg-transparent border border-[#28e98c] group-hover:border-[#28e98c]">
-                <BsFillCloudDownloadFill
-                  className="text-black  group-hover:text-[#28e98c] "
-                  size={20}
-                />
-                <h1 className="text-black group-hover:text-[#28e98c]">
-                  Download Cv
-                </h1>
-              </button>
             </div>
           </div>
-        </div>
       </div>
     </>
   );

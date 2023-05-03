@@ -8,6 +8,7 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import { useSelector } from "react-redux";
 import Contact from "./Contact";
+import { motion } from "framer-motion"
 
 const Details = () => {
   const {ColorNameFirst} = useSelector(state => state.Color);
@@ -18,8 +19,11 @@ const Details = () => {
           <FaHome className="text-slate-200" />
           <h1 className="text-slate-200">INTRODUCE</h1>
         </div>
-
-        <div className="text-white font-thin tracking-widest leading-normal text-4xl xl:text-6xl lg:tracking-widest lg:leading-snug mt-8">
+        
+        <motion.div initial={{y:-100,opacity:0}}
+         animate={{y:0,opacity:1}}
+         transition={{delay:0.2,duration:1.3,type:'keyframes',stiffness:120}}
+         className="text-white font-thin tracking-widest leading-normal text-4xl xl:text-6xl lg:tracking-widest lg:leading-snug mt-10">
           <span className="text-slate-400"> Say Hi from,</span>
           <br />{" "}
           <span className="font-bold text-5xl  lg:text-[50px] xl:text-[100px] whitespace-nowrap " style={{color:ColorNameFirst}}>
@@ -29,7 +33,7 @@ const Details = () => {
             a skilled <br />{" "}
             <span className="text-2xl lg:text-3xl ">MERN Stack Developer</span>
           </span>
-        </div>
+        </motion.div>
         <div className="text-gray-400  mt-10 max-w-[700px]">
           Hey, it's Musthak here! Are you ready to see what a top-notch MERN
           Stack Developer can do? Buckle up and get ready to be blown away by
