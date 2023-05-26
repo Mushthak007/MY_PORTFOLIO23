@@ -105,7 +105,11 @@ const Profile = () => {
             </div>
           </Modal>
         </div>
-          <div className="mt-10 lg:mt-0 md:px-10 flex  justify-center px-5 lg:hover:translate-x-4 duration-500 lg:fixed lg:ml-7">
+          <motion.div
+          initial={{y:-100,opacity:0}}
+          animate={{y:0,opacity:1}} 
+          transition={{delay:0.2,duration:1.3,type:'keyframes',stiffness:120}}
+          className="mt-10 lg:mt-0 md:px-10 flex  justify-center px-5 lg:hover:translate-x-4 duration-500 lg:fixed lg:ml-7">
             <div className="w-[750px] lg:w-[350px] px-5 py-5 border border-gray-500 rounded-3xl ">
               <div className="group">
                 <div className="flex justify-between items-center">
@@ -182,7 +186,7 @@ const Profile = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </motion.div>
       </div>
     </>
   );
