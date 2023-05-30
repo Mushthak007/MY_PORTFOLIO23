@@ -52,6 +52,7 @@ const Profile = () => {
             onRequestClose={() => setIsOpen(false)}
             className="w-[340px] lg:w-[900px] h-full bg-black/90 absolute right-0 overflow-y-auto outline-none"
             overlayClassName="Overlay"
+            ariaHideApp={false}
           >
             <div className="flex justify-end">
               <button

@@ -21,6 +21,8 @@ const userDatas = createSlice({
       state.ColorNameFirst = action.payload;
     },
     VideoLink: (state, action) => {
+      localStorage.setItem("selectedVideo",JSON.stringify(action.payload))
+      window.location.reload()
       console.log("reduxDta====>", action.payload);
       state.Video = action.payload;
     },

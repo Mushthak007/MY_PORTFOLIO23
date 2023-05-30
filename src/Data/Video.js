@@ -25,13 +25,13 @@ const Videos = [
   {
     id: 3,
     video:
-      "https://wpriverthemes.com/drake/wp-content/themes/drake/assets/images/video1.mp4",
+      "https://wpriverthemes.com/drake/wp-content/themes/drake/assets/images/video3.mp4",
     videoName: "Water Waves",
   },
   {
     id: 4,
     video:
-      "https://wpriverthemes.com/drake/wp-content/themes/drake/assets/images/video1.mp4",
+      "https://wpriverthemes.com/drake/wp-content/themes/drake/assets/images/video4.mp4",
     videoName: "Liquids Wavy",
   },
   {
@@ -43,7 +43,7 @@ const Videos = [
   {
     id: 6,
     video:
-      "https://wpriverthemes.com/drake/wp-content/themes/drake/assets/images/video1.mp4",
+      "https://wpriverthemes.com/drake/wp-content/themes/drake/assets/images/video5.mp4",
     videoName: "Simple Strings",
   },
 ];
