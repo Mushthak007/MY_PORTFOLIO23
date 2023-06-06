@@ -5,7 +5,7 @@ const initialState = {
   Video: [
     {
       id: 1,
-      video:
+      "video":
         "https://wpriverthemes.com/drake/wp-content/themes/drake/assets/images/video1.mp4",
       videoName: "Earth Lines Sphere",
     },

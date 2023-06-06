@@ -9,9 +9,9 @@ const Home = () => {
   console.log("vide0",Video)
   const localStorageData = async()=>{
     let data =await localStorage.getItem('selectedVideo')
-    const SelectedData=JSON.parse(data)
-    console.log("SelectedData---->",SelectedData)
-    setSelectedData(SelectedData)
+    const SelectedDatas=JSON.parse(data)
+    console.log("SelectedData---->",SelectedDatas)
+    setSelectedData(SelectedDatas==null?Video:SelectedDatas)
   }
 
   useEffect(()=>{
@@ -19,17 +19,17 @@ const Home = () => {
   },[])
 
   return (
-    <div>
+    <>
       {SelectedData.map((item, index) => {
         return (
-          <div>
+          <div key={index}>
             <video
               muted
               autoPlay
               loop
               className="w-full h-full fixed  object-cover left-0 right-0"
             >
-              <source src={item.video} type="video/mp4" />
+              <source src={item?.video} type="video/mp4" />
             </video>
           </div>
         );
@@ -45,7 +45,7 @@ const Home = () => {
           <SideTab />
         </section>
       </div>
-    </div>
+    </>
   );
 };
 
