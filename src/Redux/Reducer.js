@@ -6,8 +6,8 @@ const initialState = {
     {
       id: 1,
       "video":
-        "https://wpriverthemes.com/drake/wp-content/themes/drake/assets/images/video1.mp4",
-      videoName: "Earth Lines Sphere",
+        "https://wpriverthemes.com/drake/wp-content/themes/drake/assets/images/video4.mp4",
+      videoName: "Liquids Wavy",
     },
   ],
 };

@@ -3,7 +3,7 @@ import { FiSettings } from "react-icons/fi";
 import { BsInstagram, BsTwitter, BsGithub } from "react-icons/bs";
 import { BiWorld } from "react-icons/bi";
 import { HiMail } from "react-icons/hi";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose,AiFillLinkedin,AiOutlineWhatsApp } from "react-icons/ai";
 import { BsFillCloudDownloadFill } from "react-icons/bs";
 import ProfilePic from "../Assets/Profile.png";
 import Modal from "react-modal";
@@ -132,14 +132,14 @@ const Profile = () => {
                   />
                 </div>
                 <div className="flex flex-col justify-center items-center py-5">
-                  <h1 className="text-white text-xl font-semibold tracking-wide">
+                  <h1 onClick={() => window.location = 'mailto:mushtak2899@gmail.com'} className="text-white text-xl font-semibold tracking-wide cursor-pointer">
                     mushtak2899@gmail.com
                   </h1>
                   <h1 className="text-white text-xl font-semibold tracking-wide">
                     Based in Kochi
                   </h1>
                   <h1 className="text-slate-500 mt-5 text-sm">
-                    © 2023 Mushthak. All Rights Reserved
+                    © {new Date().getFullYear()} Mushthak. All Rights Reserved
                   </h1>
                 </div>
               </div>
@@ -154,7 +154,15 @@ const Profile = () => {
                 </div>
                 <div className="group">
                   <div className="border duration-500  border-gray-500 w-10 h-10 flex justify-center items-center rounded-full  group-hover:border-[#28e98c] cursor-pointer">
-                    <BiWorld
+                    <AiFillLinkedin
+                      className="text-gray-500  group-hover:text-[#28e98c]"
+                      size={15}
+                    />
+                  </div>
+                </div>
+                <div className="group">
+                  <div className="border duration-500  border-gray-500 w-10 h-10 flex justify-center items-center rounded-full  group-hover:border-[#28e98c] cursor-pointer">
+                    <AiOutlineWhatsApp
                       className="text-gray-500  group-hover:text-[#28e98c]"
                       size={15}
                     />

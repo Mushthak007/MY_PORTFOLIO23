@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 const Resume = () => {
   const {ColorNameFirst} = useSelector(state => state.Color);
   return (
-    <div>
+    <div id="Resume">
       <div className="flex gap-2 items-center border border-gray-500 w-32 justify-center  py-1 rounded-2xl">
         <BsCalendar3 className="text-slate-200 " size={16} />
         <span className="text-slate-200 text-sm">RESUME</span>

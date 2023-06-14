@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 const Services = () => {
   const {ColorNameFirst} = useSelector(state => state.Color);
   return (
-    <div>
+    <div id="Services">
       <div className="flex gap-2 items-center border border-gray-500 w-36 justify-center  py-1 rounded-2xl">
         <AiOutlineCode className="text-slate-200" />
         <h1 className="text-slate-200">SERVICES</h1>

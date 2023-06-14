@@ -14,7 +14,7 @@ const Details = () => {
   const {ColorNameFirst} = useSelector(state => state.Color);
   return (
     <>
-      <div className=" lg:mt-28 mt-5  xl:mr-60 p-5  max-w-[950px] lg:ml-[500px] font-mono ">
+      <div id="Home" className=" lg:mt-28 mt-5  xl:mr-60 p-5  max-w-[950px] lg:ml-[500px] font-mono ">
         <div className="flex gap-2 items-center border border-gray-500 w-36 justify-center  py-1 rounded-2xl">
           <FaHome className="text-slate-200" />
           <h1 className="text-slate-200">INTRODUCE</h1>

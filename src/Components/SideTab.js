@@ -12,27 +12,27 @@ const SideTab = () => {
   return (
 <div className="flex items-center h-screen">
 <div className="border px-4  py-8 hidden xl:fixed right-10  border-gray-500 rounded-full xl:flex flex-col gap-y-8">
-      <div >
+      <a href="#Home" >
         <FaHome className="text-slate-200 hover:text-[#28e98c]  cursor-pointer" size={23}/>
-      </div>
-      <div>
+      </a>
+      <a href="#About">
         <FiUser className="text-slate-200 hover:text-[#28e98c]  cursor-pointer" size={23} />
-      </div>
-      <div>
+      </a>
+      <a href="#Resume">
         <BsCalendar3 className="text-slate-200 hover:text-[#28e98c]  cursor-pointer" size={23} />
-      </div>
-      <div>
+      </a>
+      <a href="#Services">
         <AiOutlineCode className="text-slate-200 hover:text-[#28e98c]  cursor-pointer" size={23}/>
-      </div>
-      <div>
+      </a>
+      <a href="#Skills">
         <GiSkills className="text-slate-200 hover:text-[#28e98c]  cursor-pointer" size={23} />
-      </div>
-      <div>
+      </a>
+      <a href="#Project">
         <GiNotebook className="text-slate-200 hover:text-[#28e98c]  cursor-pointer" size={23} />
-      </div>
-      <div>
+      </a>
+      <a href="#Contact">
         <AiFillMail className="text-slate-200 hover:text-[#28e98c]  cursor-pointer" size={23} />
-      </div>
+      </a>
     </div>
 </div>
   );

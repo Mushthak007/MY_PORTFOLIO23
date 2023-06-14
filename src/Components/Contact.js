@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 const Contact = () => {
   const { ColorNameFirst } = useSelector((state) => state.Color);
   return (
-    <div>
+    <div id="Contact">
       <div className="flex gap-2 items-center border border-gray-500 w-32 justify-center  py-1 rounded-2xl">
         <AiFillMail className="text-slate-200 " size={15} />
         <span className="text-slate-200 text-sm">CONTACT</span>
@@ -16,7 +16,7 @@ const Contact = () => {
           Let's Work <span style={{ color: ColorNameFirst }}>Together!</span>
         </h1>
       </div>
-      <h1 className="text-white text-xl tracking-wider font-extralight">
+      <h1 onClick={() => window.location = 'mailto:mushtak2899@gmail.com'} className="text-white text-xl tracking-wider font-extralight cursor-pointer ">
         mushtak2899@gmail.com
       </h1>
       <div className="py-10">
@@ -30,16 +30,7 @@ const Contact = () => {
             className="bg-transparent outline-none text-white py-2 placeholder:text-[18px]"
           />
         </div>
-        <div className="py-7">
-          <h1 className="text-white capitalize">
-          company name <span className="text-red-500">*</span>
-          </h1> 
-          <input
-            type="text"
-            placeholder="Your Company Name"
-            className="bg-transparent outline-none text-white py-2 placeholder:text-[18px]"
-          />
-        </div>
+
         <div className="py-7">
           <h1 className="text-white">PHONE (OPTIONAL)</h1>
           <input
