@@ -59,7 +59,7 @@ const Details = () => {
             <div className="text-gray-500 mt-3">YEARS OF EXPERIENCE</div>
           </div>
           <div className="w-[200px] ">
-            <h1 className=" text-7xl" style={{color:ColorNameFirst}}>10+</h1>
+            <h1 className=" text-7xl" style={{color:ColorNameFirst}}>5+</h1>
             <div className="text-gray-500 mt-3">
               PROJECTS COMPLETED ON 3 COUNTRIES
             </div>
