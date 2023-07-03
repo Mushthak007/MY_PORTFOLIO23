@@ -10,22 +10,22 @@ const App = () => {
   const { scrollYProgress } = useScroll();
   return (
     <>
+        <CustomCursor
+          // targets={[".link", ".your-css-selector"]}
+          // customClass="custom-cursor"
+          dimensions={50}
+          fill={ColorNameFirst}
+          smoothness={{
+            movement: 0.2,
+            scale: 0.1,
+            opacity: 0.2,
+          }}
+          targetOpacity={0.5}
+        />
       <motion.div
         className={"progress-bar"}
         style={{ scaleX: scrollYProgress ,background:ColorNameFirst}}
       />
-      <CustomCursor
-        targets={[".link", ".your-css-selector"]}
-        customClass="custom-cursor"
-        dimensions={50}
-        fill={ColorNameFirst}
-        smoothness={{
-          movement: 0.2,
-          scale: 0.1,
-          opacity: 0.2,
-        }}
-        targetOpacity={0.5}
-      ></CustomCursor>
       <Routers />
     </>
   );
